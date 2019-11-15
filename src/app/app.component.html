@@ -1,0 +1,11 @@
+
+<div class="contner">
+  <mat-sidenav-container class="matContainer" >
+  <mat-sidenav #sideNav opened (click)="sideNav.toggle" mode="side" class="sidenv"><app-sidenav></app-sidenav></mat-sidenav>
+  <!-- <mat-sidenav opened mode="side" position="end">End content</mat-sidenav> -->
+  <mat-sidenav-content>
+  <app-navbar [inputSideNav]="sideNav"></app-navbar>
+  <router-outlet class="contner"></router-outlet>
+</mat-sidenav-content>
+      </mat-sidenav-container>
+</div>

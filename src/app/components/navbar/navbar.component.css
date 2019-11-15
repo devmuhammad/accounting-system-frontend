@@ -1,0 +1,67 @@
+.nametxt{
+    color: #665a4d;
+    font-size: 16px;
+    font-weight: 400;
+    align-self:center;
+    /* line-height:16px */
+  }
+  .prf{
+    background-color: #e2fceb;
+    border-radius: 10px;
+    margin-right:10px;
+    height:auto;
+    cursor:pointer
+  /* width:auto; */
+  /* #a2f5bf */
+
+}
+.app-header{
+    background-color: #007d53;
+    height: 50px;
+    /* #003a24#007d53 */
+}
+/* .navitems{ */
+  /* flex:1; */
+  /* justify-content:space-between;
+  width:100px */
+/* } */
+.nav-tool-items{
+    flex: 1 1 auto;
+  }
+  
+  .linktxt{
+    color: #665a4d;
+    font-size: 16px;
+    font-weight: 500;
+    align-self:center
+  }
+  .typtxt {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right:20px;
+    margin-left:20px;
+    /* font-style: italic; */
+    /* align-self:center; */
+  }
+  .nameimg{
+    font-size:22px;
+    font-weight: 600;
+    color:#003a24;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  .exticon{
+    font-size: 24px;
+    font-weight: 500;
+    align-self:center;
+    color:#fff;
+    /* margin-right:10px; */
+    cursor:pointer
+  }
+  .active-link{
+    background-color:#0b6442;
+  }
+  
