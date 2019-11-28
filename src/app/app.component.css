@@ -4,6 +4,11 @@
     flex:1;
     overflow: hidden;
   }
+.contaner{
+    flex:1;
+    overflow: hidden;
+    /* margin-right:20px; */
+  }
 .matContainer{
   position: absolute;
   top: 0;

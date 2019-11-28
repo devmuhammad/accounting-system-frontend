@@ -1,0 +1,72 @@
+<form id="NewSubOrg" [formGroup]="NewSubOrg" class="busform" (ngSubmit)="onNewSubOrgSubmit(NewSubOrg.value)"> 
+    <div class="sheetHeader">
+        <span><strong>{{action}} Sub Organization</strong></span>
+    </div>
+        <div class="full-width">
+                <div class="full-width" fxLayout="row" >
+                        <div class="indvfield">
+                        <mat-form-field class="qtr-width">
+                        <mat-select formControlName="SubOrgType" placeholder="Sub Organization Type ">
+                            <mat-option value="option">Head Office</mat-option>
+                            <mat-option value="option">Branch Office</mat-option>
+                            <mat-option value="option">Division</mat-option>
+                        </mat-select>
+                        </mat-form-field> 
+                <!-- <mat-error>  
+                        <span class="errtxt" *ngIf="!NewSubOrg.get('SubOrgType').valid && NewSubOrg.get('SubOrgType').touched">Please select org type !!!</span>  
+                </mat-error>  -->
+              </div>
+              <div class="indvfield">
+                    <mat-form-field class="qtr-width">
+                            <mat-select formControlName="ParentOrg" placeholder="Parent Organization">
+                                <mat-option value="option">Head Office</mat-option>
+                                <mat-option value="option">Branch Office</mat-option>
+                                <!-- <mat-option value="option">Division</mat-option> -->
+                            </mat-select>
+                            </mat-form-field> 
+                    <!-- <mat-error>  
+                            <span class="errtxt" *ngIf="!NewSubOrg.get('ParentOrg').valid && NewSubOrg.get('ParentOrg').touched">Please select Parent Org !!!</span>  
+                    </mat-error>  -->
+              </div>
+              </div>
+              <mat-form-field> 
+                    <input formControlName="Description" matInput placeholder="Description"> 
+                </mat-form-field>  
+                <mat-error>  
+                    <span class="errtxt" *ngIf="!NewSubOrg.get('Description').valid && NewSubOrg.get('Description').touched">Please enter description !!!</span>  
+                </mat-error>
+
+                
+                <div class="full-width" fxLayout="row" >
+                        <div class="indvfield">
+                        <mat-form-field class="qtr-width"> 
+                            <input formControlName="ContactNo" type="tel" matInput placeholder="Contact Number"> 
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span class="errtxt" *ngIf="!NewSubOrg.get('ContactNo').valid && NewSubOrg.get('ContactNo').touched">Please enter contact number !!!</span>  
+                        </mat-error>
+                    </div> 
+                    <div class="indvfield">
+                        <mat-form-field class="full-width"> 
+                            <input formControlName="ContactEmail" matInput placeholder="Contact Email"> 
+                        </mat-form-field>  
+                        <mat-error >  
+                            <span class="errtxt" *ngIf="!NewSubOrg.get('ContactEmail').valid && NewSubOrg.get('ContactEmail').touched">Please enter contact email !!!</span>  
+                        </mat-error>
+                    </div> 
+                </div>  
+
+
+                <mat-form-field>
+                    <textarea matInput formControlName="Address" placeholder="Address"></textarea>
+                </mat-form-field>
+                <mat-error>  
+                    <span class="errtxt" *ngIf="!NewSubOrg.get('Address').valid && NewSubOrg.get('Address').touched">Please enter address !!!</span>  
+                </mat-error>
+
+                <mat-action-row>
+                        <button mat-button color="primary" type="submit" form="NewSubOrg" [disabled]="NewSubOrg.invalid">{{action}}</button>
+                    </mat-action-row>
+              </div>
+    
+</form>

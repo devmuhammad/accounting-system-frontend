@@ -1,8 +1,10 @@
 <mat-toolbar class="app-header">
     <div class="navitems">
     <a mat-button (click)="inputSideNav.toggle()" matTooltip="Toggle Menu" matTooltipPosition="below"><mat-icon  class="exticon">menu</mat-icon></a> &nbsp;&nbsp;&nbsp;
-    <a mat-button matTooltip="Settings" matTooltipPosition="below" routerLink="settings" routerLinkActive="active-link"><mat-icon class="exticon">settings</mat-icon></a>&nbsp;&nbsp;&nbsp;    
-    <a mat-button matTooltip="Report Mapping" matTooltipPosition="below" routerLink="reportmapping" routerLinkActive="active-link"><mat-icon class="exticon isactive">report</mat-icon></a>&nbsp;
+    <a mat-button matTooltip="Dashboard" matTooltipPosition="below" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]={exact:true}><mat-icon class="exticon">dashboard</mat-icon></a>&nbsp;&nbsp;&nbsp;    
+    <a mat-button matTooltip="User Manager" matTooltipPosition="below" routerLink="usermanager" routerLinkActive="active-link" [routerLinkActiveOptions]={exact:true}><mat-icon class="exticon">account_circle</mat-icon></a>&nbsp;&nbsp;&nbsp;    
+    <a mat-button matTooltip="Settings" matTooltipPosition="below" routerLink="settings" routerLinkActive="active-link" [routerLinkActiveOptions]={exact:true}><mat-icon class="exticon">settings</mat-icon></a>&nbsp;&nbsp;&nbsp;    
+    <a mat-button matTooltip="Report Mapping" matTooltipPosition="below" routerLink="reportmapping" routerLinkActive="active-link" [routerLinkActiveOptions]={exact:true}><mat-icon class="exticon isactive">report</mat-icon></a>&nbsp;
     </div>
     <span class="nav-tool-items"></span>
           
