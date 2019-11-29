@@ -1,0 +1,63 @@
+.fullview{
+   margin-right:20px;
+    margin-top: 20px;
+}
+.section{
+    flex:1;
+    margin-left:15px;
+    margin-bottom:10px;
+    /* margin-right:15px; */
+}
+.header-desc{
+    justify-content: space-between;
+    align-items: center;
+}
+.full-width{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.qtr-width{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    padding-right:10px
+}
+.formSide{
+    flex-direction: row;
+}
+.busform{
+    flex:1;
+    width:100%
+}
+.errtxt{
+    font-size: 12px;
+}
+.indvfield{
+    flex:1;
+}
+.lbltxt{
+    color:gray
+}
+table {
+    width: 100%;
+  }
+.ng-hide{
+    display: none;
+}
+.sheetHeader{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px
+}
+.tblicon{
+    color:gray;
+    cursor: pointer;
+}
+.tblview mat-icon{
+    visibility: hidden;
+}
+.tblview:hover mat-icon{
+    visibility : visible;
+}
