@@ -1,1 +1,12 @@
-<p>settings works!</p>
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="General Settings">
+      <ng-template matTabContent>
+        <app-general-settings></app-general-settings>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Other Settings">
+      <ng-template matTabContent>
+        <app-other-settings></app-other-settings>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>

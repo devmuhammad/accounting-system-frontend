@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-
+import {} from "@angular/material/bottom-sheet";
 import {
   MatButtonModule,
   MatToolbarModule,
@@ -8,6 +8,7 @@ import {
   MatBadgeModule,
   MatSidenavModule,
   MatListModule,
+  MatMenuModule,
   MatGridListModule,
   MatFormFieldModule,
   MatInputModule,
@@ -16,12 +17,16 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatChipsModule,
+  MatTabsModule,
   MatTooltipModule,
   MatTableModule,
   MatPaginatorModule,
-  MatCardModule,
-  MatTabsModule
+  MatExpansionModule,
+  ErrorStateMatcher,
+  MatBottomSheetModule,
+  ShowOnDirtyErrorStateMatcher
 } from "@angular/material";
+// import {MatExpansionModule} from '@angular/material/expansion'
 
 @NgModule({
   imports: [
@@ -40,11 +45,14 @@ import {
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
+    MatTabsModule,
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
-    MatCardModule,
-    MatTabsModule
+    MatExpansionModule,
+    MatBottomSheetModule,
+    MatMenuModule
+    // MatAccordion
   ],
   exports: [
     MatButtonModule,
@@ -60,12 +68,18 @@ import {
     MatRadioModule,
     MatDatepickerModule,
     MatChipsModule,
+    MatTabsModule,
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
-    MatCardModule,
-    MatTabsModule
+    MatExpansionModule,
+    MatBottomSheetModule,
+    MatMenuModule
+    // MatAccordion
   ],
-  providers: [MatDatepickerModule]
+  providers: [
+    MatDatepickerModule,
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
+  ]
 })
 export class AngularMaterialModule {}
