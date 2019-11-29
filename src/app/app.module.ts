@@ -19,6 +19,8 @@ import { FixedAssetsComponent } from './components/fixed-assets/fixed-assets.com
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { EPaymentsComponent } from './components/e-payments/e-payments.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthlayoutComponent } from './layout/authlayout/authlayout.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { EPaymentsComponent } from './components/e-payments/e-payments.component
     FixedAssetsComponent,
     InventoryComponent,
     ReportsComponent,
-    EPaymentsComponent
+    EPaymentsComponent,
+    LoginComponent,
+    AuthlayoutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,8 @@
-
-
-.contner{
-    flex:1;
-    overflow: hidden;
-  }
-.matContainer{
+.contner {
+  flex: 1;
+  overflow: hidden;
+}
+.matContainer {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -12,8 +10,7 @@
   right: 0;
 }
 
-.sidenv{
-  width:15%;
-  background-color:#e2fceb
-  
+.sidenv {
+  width: 15%;
+  background-color: #e2fceb;
 }
