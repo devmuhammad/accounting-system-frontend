@@ -1,0 +1,22 @@
+mat-card > mat-card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+mat-card-header {
+  display: flex;
+}
+
+table {
+  width: 100%;
+}
+
+.user-group-container {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.user-group-control {
+  display: flex;
+  justify-content: flex-end;
+}

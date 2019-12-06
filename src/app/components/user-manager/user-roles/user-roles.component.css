@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+}
+
+.user-roles-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 10px;
+}
+
+.user-roles-container mat-checkbox {
+  margin-right: 20px;
+}
+
+.privileges {
+  display: grid;
+  grid-template-columns: auto auto;
+  font-weight: bold;
+}
+.privileges p {
+  display: inline-block;
+  line-height: 0.65px;
+}
+
+.user-roles-control {
+  display: flex;
+  justify-content: flex-end;
+}
