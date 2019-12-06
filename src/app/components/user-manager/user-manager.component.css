@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: row-reverse !important;
+}
+
+td,
+th {
+  text-align: center !important;
+}
+
+mat-header-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.user-groups-roles-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10px;
+}

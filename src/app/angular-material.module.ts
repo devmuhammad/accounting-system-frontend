@@ -24,7 +24,10 @@ import {
   MatExpansionModule,
   ErrorStateMatcher,
   MatBottomSheetModule,
-  ShowOnDirtyErrorStateMatcher
+  ShowOnDirtyErrorStateMatcher,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDialogModule
 } from "@angular/material";
 // import {MatExpansionModule} from '@angular/material/expansion'
 
@@ -51,7 +54,10 @@ import {
     MatPaginatorModule,
     MatExpansionModule,
     MatBottomSheetModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDialogModule
     // MatAccordion
   ],
   exports: [
@@ -74,7 +80,10 @@ import {
     MatPaginatorModule,
     MatExpansionModule,
     MatBottomSheetModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatDialogModule
     // MatAccordion
   ],
   providers: [

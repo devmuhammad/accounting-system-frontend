@@ -1,5 +1,146 @@
 <mat-tab-group>
-  <mat-tab label="First"> Content 1 </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
+  <mat-tab label="All Users">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <mat-card-actions align="end">
+            <button mat-button color="warn">
+              <mat-icon aria-hidden="false" aria-label="Person add icon"
+                >delete</mat-icon
+              >
+              Delete User
+            </button>
+            <button mat-button color="primary" (click)="openDialog()">
+              <mat-icon aria-hidden="false" aria-label="Person add icon"
+                >person_add</mat-icon
+              >
+              Add User
+            </button>
+          </mat-card-actions>
+        </mat-card-title>
+      </mat-card-header>
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <!-- Checkbox Column -->
+          <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-checkbox
+                (change)="$event ? masterToggle() : null"
+                [checked]="selection.hasValue() && isAllSelected()"
+                [indeterminate]="selection.hasValue() && !isAllSelected()"
+                [aria-label]="checkboxLabel()"
+                color="primary"
+              >
+              </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-checkbox
+                (click)="$event.stopPropagation()"
+                (change)="$event ? selection.toggle(row) : null"
+                [checked]="selection.isSelected(row)"
+                [aria-label]="checkboxLabel(row)"
+                color="primary"
+              >
+              </mat-checkbox>
+            </td>
+          </ng-container>
+
+          <!-- Position Column -->
+          <!-- <ng-container matColumnDef="sn">
+            <th mat-header-cell *matHeaderCellDef>SN</th>
+            <td mat-cell *matCellDef="let i">{{ i + 1 }}</td>
+          </ng-container> -->
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>NAME</th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+
+          <!-- User Name Column -->
+          <ng-container matColumnDef="userName">
+            <th mat-header-cell *matHeaderCellDef>USER NAME</th>
+            <td mat-cell *matCellDef="let element">{{ element.userName }}</td>
+          </ng-container>
+
+          <!-- Department/Location Column -->
+          <ng-container matColumnDef="deptmnt_location">
+            <th mat-header-cell *matHeaderCellDef>DEPT/LOCATION</th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.deptmnt_location }}
+            </td>
+          </ng-container>
+
+          <!-- Date Created Column -->
+          <ng-container matColumnDef="dateCreated">
+            <th mat-header-cell *matHeaderCellDef>DATE CREATED</th>
+            <td mat-cell *matCellDef="let element">
+              {{ element.dateCreated }}
+            </td>
+          </ng-container>
+
+          <!-- Last Login Column -->
+          <ng-container matColumnDef="lastLogin">
+            <th mat-header-cell *matHeaderCellDef>LAST LOGIN</th>
+            <td mat-cell *matCellDef="let element">{{ element.lastLogin }}</td>
+          </ng-container>
+
+          <!-- DR Limit Column -->
+          <ng-container matColumnDef="drLimit">
+            <th mat-header-cell *matHeaderCellDef>DR LIMIT</th>
+            <td mat-cell *matCellDef="let element">{{ element.drLimit }}</td>
+          </ng-container>
+
+          <!-- CR Limit Column -->
+          <ng-container matColumnDef="crLimit">
+            <th mat-header-cell *matHeaderCellDef>CR LIMIT</th>
+            <td mat-cell *matCellDef="let element">{{ element.crLimit }}</td>
+          </ng-container>
+
+          <!-- Action Limit Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-button [matMenuTriggerFor]="actionMenu">
+                <mat-icon aria-hidden="false" aria-label="Person add icon"
+                  >keyboard_arrow_down</mat-icon
+                >
+              </button>
+              <mat-menu #actionMenu="matMenu">
+                <button mat-menu-item>Edit</button>
+                <button mat-menu-item>Delete</button>
+              </mat-menu>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+
+        <mat-paginator
+          [length]="7"
+          [pageSize]="5"
+          [pageSizeOptions]="[2, 3, 5, 7]"
+          showFirstLastButton
+        >
+        </mat-paginator>
+      </div>
+    </mat-card>
+  </mat-tab>
+
+  <!-- ########  User Groups Tab ######### 
+        ###################################-->
+
+  <mat-tab label="User Groups">
+    <mat-card>
+      <mat-card-content>
+        <div class="user-groups-roles-container">
+          <app-user-groups></app-user-groups>
+          <app-user-roles></app-user-roles>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-tab>
+
+  <!-- ###### User Groups Tab Ends ######-->
 </mat-tab-group>

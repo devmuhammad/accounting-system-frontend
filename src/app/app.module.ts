@@ -26,6 +26,11 @@ import { AuthlayoutComponent } from "./layout/authlayout/authlayout.component";
 import { GeneralSettingsComponent } from "./components/settings/general-settings/general-settings.component";
 import { addNewSubOrg } from "./components/settings/general-settings/general-settings.component";
 import { OtherSettingsComponent } from "./components/settings/other-settings/other-settings.component";
+import { NewUserDialogComponent } from "./components/user-manager/new-user-dialog/new-user-dialog.component";
+import { NewUserGroupDialogComponent } from "./components/user-manager/user-groups/new-user-group-dialog/new-user-group-dialog.component";
+import { UserGroupsComponent } from "./components/user-manager/user-groups/user-groups.component";
+import { UserRolesComponent } from "./components/user-manager/user-roles/user-roles.component";
+import { NewUserRoleDialogComponent } from "./components/user-manager/user-roles/new-user-role-dialog/new-user-role-dialog.component";
 
 @NgModule({
   declarations: [
@@ -47,9 +52,19 @@ import { OtherSettingsComponent } from "./components/settings/other-settings/oth
     AuthlayoutComponent,
     GeneralSettingsComponent,
     OtherSettingsComponent,
-    addNewSubOrg
+    addNewSubOrg,
+    NewUserDialogComponent,
+    NewUserGroupDialogComponent,
+    UserGroupsComponent,
+    UserRolesComponent,
+    NewUserRoleDialogComponent
   ],
-  entryComponents: [addNewSubOrg],
+  entryComponents: [
+    addNewSubOrg,
+    NewUserDialogComponent,
+    NewUserGroupDialogComponent,
+    NewUserRoleDialogComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

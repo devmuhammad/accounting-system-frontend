@@ -16,7 +16,7 @@ import { LoginComponent } from "./components/login/login.component";
 
 const routes: Routes = [
   // { path: '', pathMatch: 'full', redirectTo: 'app' },
-  { path: "dashboard", component: DashboardComponent },
+  { path: "", component: DashboardComponent },
   { path: "accounts", component: AccountsComponent },
   { path: "settings", component: SettingsComponent },
   { path: "transactions", component: TransactionsComponent },
@@ -26,8 +26,7 @@ const routes: Routes = [
   { path: "inventory", component: InventoryComponent },
   { path: "projects", component: ProjectsComponent },
   { path: "fixedassets", component: FixedAssetsComponent },
-  { path: "epayment", component: EPaymentsComponent },
-  { path: "", component: LoginComponent }
+  { path: "epayment", component: EPaymentsComponent }
   // { path: 'register', component: RegisterComponent }
 ];
 
